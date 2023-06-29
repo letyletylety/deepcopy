@@ -9,7 +9,7 @@ topics:
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
-  flutter: '>=1.17.0'
+  # flutter: '>=1.17.0'
 
 dependencies:
   # fast_immutable_collections: ^9.1.5
