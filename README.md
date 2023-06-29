@@ -16,7 +16,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-    deepcopy: ^1.0.0
+    deepcopy: ^1.0.1
 ```
 
 ## Features
