@@ -10,8 +10,8 @@ environment:
 
 dependencies:
   # fast_immutable_collections: ^9.1.5
-  flutter:
-    sdk: flutter
+  # flutter:
+  #   sdk: flutter
 
 dev_dependencies:
   flutter_test:
