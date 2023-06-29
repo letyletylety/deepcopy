@@ -9,7 +9,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
-  clone:
+  deepcopy:
     path: '../'
 
 dev_dependencies:

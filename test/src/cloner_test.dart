@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:_clone/src/cloner.dart';
+import 'package:deepcopy/src/cloner.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -25,7 +25,7 @@ void main() {
         ],
         {'name': 'John', 'age': 30}
       ];
-      List clonedList = cloner.cloneList(originalList);
+      List clonedList = cloner.deepcopyList(originalList);
 
       print(
           originalList); // Output: [1, 2, [3, 4, [5, 6, [7, 8]]], {name: John, age: 30}]
@@ -81,7 +81,7 @@ void main() {
           }
         }
       };
-      Map clonedMap = cloner.cloneMap(originalMap);
+      Map clonedMap = cloner.deepcopyMap(originalMap);
 
       print(
           originalMap); // Output: {person: {name: John, age: 30}, numbers: [1, 2, 3], nested: {a: {b: {c: {d: deep}}}}}
@@ -141,7 +141,7 @@ void main() {
         ],
         {'mango': 'sweet', 'orange': 'juicy'}
       };
-      Set clonedSet = cloner.cloneSet(originalSet);
+      Set clonedSet = cloner.deepcopySet(originalSet);
 
       print(
           originalSet); // Output: {apple, banana, {carrot}, [durian, [elderberry, {fig, [grapefruit, {honeydew}]}]], {mango: sweet, orange: juicy}}

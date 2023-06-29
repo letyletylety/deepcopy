@@ -1,4 +1,4 @@
-name: _clone
+name: deepcopy
 description: recursive deep copy for nested collections
 version: 1.0.0
 homepage:
@@ -19,4 +19,4 @@ dev_dependencies:
 
 screenshots:
   - description: The package logo.
-    path: logos/clone_logo@4x.png
+    path: logos/deepcopy_logo@4x.png

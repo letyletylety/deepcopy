@@ -1,4 +1,4 @@
-import 'package:clone/clone.dart';
+import 'package:deepcopy/deepcopy.dart';
 
 void main(List<String> arguments) {
   // Test list cloning
@@ -17,7 +17,7 @@ void main(List<String> arguments) {
     {'name': 'John', 'age': 30}
   ];
   // clone it!
-  List clonedList = originalList.clone();
+  List clonedList = originalList.deepcopy();
 
   // some changes
   clonedList[0] = 100;
@@ -42,7 +42,7 @@ void main(List<String> arguments) {
   };
 
   // clone it!
-  Map clonedMap = originalMap.clone();
+  Map clonedMap = originalMap.deepcopy();
 
   // some changes
   originalMap['person']['name'] = 'Jane';
@@ -59,7 +59,7 @@ void main(List<String> arguments) {
     {'carrot'},
     ['durian']
   };
-  Set clonedSet = originalSet.clone();
+  Set clonedSet = originalSet.deepcopy();
 
   originalSet.clear();
 

@@ -1,19 +1,19 @@
-import 'package:_clone/src/cloner.dart';
+import 'package:deepcopy/src/cloner.dart';
 
 extension ListCloner on List {
-  List clone() {
-    return NormalCloner().cloneList(this);
+  List deepcopy() {
+    return NormalCloner().deepcopyList(this);
   }
 }
 
 extension SetCloner on Set {
-  Set clone() {
-    return NormalCloner().cloneSet(this);
+  Set deepcopy() {
+    return NormalCloner().deepcopySet(this);
   }
 }
 
 extension MapClone on Map {
-  Map clone() {
-    return NormalCloner().cloneMap(this);
+  Map deepcopy() {
+    return NormalCloner().deepcopyMap(this);
   }
 }

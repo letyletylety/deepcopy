@@ -1,7 +1,7 @@
-# _Clone
+# deepcopy
 
 <p align="center">
-<img src="logos/clone_logo@4x.png" height="256" alt="Bloc" 
+<img src="logos/deepcopy_logo@4x.png" height="256" alt="Bloc" 
 background-color='transparent'/>
 </p>
 
@@ -16,7 +16,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-    _clone: ^1.0.0
+    deepcopy: ^1.0.0
 ```
 
 ## Features
@@ -28,12 +28,12 @@ dependencies:
 
 ```dart
 // import this
-import 'package:_clone/clone.dart';
+import 'package:deepcopy/deepcopy.dart';
 
 // clone it!
-List clonedList = originalList.clone();
-Map clonedMap = originalMap.clone();
-Set clonedSet = originalSet.clone();
+List clonedList = originalList.deepcopy();
+Map clonedMap = originalMap.deepcopy();
+Set clonedSet = originalSet.deepcopy();
 ```
 
 that's it!
@@ -46,8 +46,8 @@ If you're interested in learning more, check out the
 - [ ] fast cloning for huge collection
 - [ ] add benchmarks
 
-## Why is the name _clone?
+## The story behind naming this plugin
 
 At first I thought of names like "deepcopy" or "clone". I chose the shorter of the two, "clone". It didn't show up when I searched it in pub.dev. After implementing all the code, creating a logo, and writing the README,
 I got an unauthorized error trying to deploy version 1.0.
-It wasn't until I typed "https://pub.dev/packages/clone" into the address bar that I realized that the name had been taken six years earlier. I didn't realize that I might not be able to find the plugin on pub. I thought of "deepcopy" as the next best thing, but I didn't want to change the API.
+It wasn't until I typed "https://pub.dev/packages/clone" into the address bar that I realized that the name had been taken six years earlier. I didn't realize that I might not be able to find the plugin on pub. I thought of "deepcopy" as the next best thing.
