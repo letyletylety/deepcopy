@@ -8,6 +8,8 @@ background-color='transparent'/>
 <h2 align="center">recursive deep copy for nested collections
 </h2>
 
+[![pub package](https://img.shields.io/pub/v/deepcopy.svg?label=deepcopy&color=blue)](https://pub.dev/packages/deepcopy)
+
 This plugin helps with recursive [deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy) for nested collections, such as [List](https://api.flutter.dev/flutter/dart-core/List-class.html), [Map](https://api.flutter.dev/flutter/dart-core/Map-class.html), [Set](https://api.flutter.dev/flutter/dart-core/Set-class.html), ensuring that the cloned object is independent and does not share references with the original object, so that the cloned and existing object do not affect each other.
 
 ## Install
