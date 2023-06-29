@@ -95,15 +95,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0"
-  fast_immutable_collections:
-    dependency: transitive
-    description:
-      name: fast_immutable_collections
-      sha256: b4f7d3af6e90a80cf7a3dddd0de3b4a46acb446320795b77b034535c4d267fbe
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.1.5"
+    version: "1.0.1"
   file:
     dependency: transitive
     description:

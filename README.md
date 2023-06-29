@@ -1,7 +1,7 @@
 # deepcopy
 
 <p align="center">
-<img src="logos/deepcopy_logo@4x.png" height="256" alt="Bloc" 
+<img src="https://raw.githubusercontent.com/letyletylety/deepcopy/main/logos/deepcopy_logo%404x.png" height="256" alt="deepcopy" 
 background-color='transparent'/>
 </p>
 
