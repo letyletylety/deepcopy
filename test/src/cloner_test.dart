@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:clone/src/cloner.dart';
+import 'package:_clone/src/cloner.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

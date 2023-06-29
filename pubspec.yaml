@@ -1,4 +1,4 @@
-name: clone
+name: _clone
 description: recursive deep copy for nested collections
 version: 1.0.0
 homepage:

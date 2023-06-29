@@ -1,4 +1,4 @@
-import 'package:clone/src/cloner.dart';
+import 'package:_clone/src/cloner.dart';
 
 extension ListCloner on List {
   List clone() {

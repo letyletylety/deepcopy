@@ -1,4 +1,4 @@
-# Clone
+# _Clone
 
 <p align="center">
 <img src="logos/clone_logo@4x.png" height="256" alt="Bloc" 
@@ -10,14 +10,13 @@ background-color='transparent'/>
 
 This plugin helps with recursive [deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy) for nested collections, such as [List](https://api.flutter.dev/flutter/dart-core/List-class.html), [Map](https://api.flutter.dev/flutter/dart-core/Map-class.html), [Set](https://api.flutter.dev/flutter/dart-core/Set-class.html), ensuring that the cloned object is independent and does not share references with the original object, so that the cloned and existing object do not affect each other.
 
-
 ## Install
 
 Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-    clone: ^1.0.0
+    _clone: ^1.0.0
 ```
 
 ## Features
@@ -29,7 +28,7 @@ dependencies:
 
 ```dart
 // import this
-import 'package:clone/clone.dart';
+import 'package:_clone/clone.dart';
 
 // clone it!
 List clonedList = originalList.clone();
@@ -46,3 +45,9 @@ If you're interested in learning more, check out the
 
 - [ ] fast cloning for huge collection
 - [ ] add benchmarks
+
+## Why is the name _clone?
+
+At first I thought of names like "deepcopy" or "clone". I chose the shorter of the two, "clone". It didn't show up when I searched it in pub.dev. After implementing all the code, creating a logo, and writing the README,
+I got an unauthorized error trying to deploy version 1.0.
+It wasn't until I typed "https://pub.dev/packages/clone" into the address bar that I realized that the name had been taken six years earlier. I didn't realize that I might not be able to find the plugin on pub. I thought of "deepcopy" as the next best thing, but I didn't want to change the API.
