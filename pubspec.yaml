@@ -1,8 +1,11 @@
 name: deepcopy
 description: recursive deep copy for nested collections
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/letyletylety/deepcopy
 issue_tracker: https://github.com/letyletylety/deepcopy/issues
+topics:
+  - deepcopy
+  - collection
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
