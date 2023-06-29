@@ -1,7 +1,7 @@
 # Clone
 
 <p align="center">
-<img src="clone_logo@4x.png" height="256" alt="Bloc" 
+<img src="logos/clone_logo@4x.png" height="256" alt="Bloc" 
 background-color='transparent'/>
 </p>
 
