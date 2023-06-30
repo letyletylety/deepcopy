@@ -1,8 +1,4 @@
-abstract interface class ClonerBase {
-  List deepcopyList(List list);
-  Set deepcopySet(Set set);
-  Map deepcopyMap(Map map);
-}
+import 'cloner_base.dart';
 
 class NormalCloner implements ClonerBase {
   @override
@@ -60,25 +56,5 @@ class NormalCloner implements ClonerBase {
       }
     }
     return copy;
-  }
-}
-
-class FastCloner implements ClonerBase {
-  @override
-  List deepcopyList(List list) {
-    // TODO: implement cloneList
-    throw UnimplementedError();
-  }
-
-  @override
-  Map deepcopyMap(Map map) {
-    // TODO: implement cloneMap
-    throw UnimplementedError();
-  }
-
-  @override
-  Set deepcopySet(Set set) {
-    // TODO: implement cloneSet
-    throw UnimplementedError();
   }
 }
