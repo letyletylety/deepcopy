@@ -97,7 +97,7 @@ packages:
     source: path
     version: "1.0.2"
   fast_immutable_collections:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: fast_immutable_collections
       sha256: b4f7d3af6e90a80cf7a3dddd0de3b4a46acb446320795b77b034535c4d267fbe

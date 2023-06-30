@@ -1,5 +1,7 @@
 import 'package:deepcopy/deepcopy.dart';
 
+abstract class Data {}
+
 void main(List<String> arguments) {
   // Test list cloning
   List originalList = [

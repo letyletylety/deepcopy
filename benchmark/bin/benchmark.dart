@@ -1,5 +1,8 @@
-import 'package:benchmark/benchmark.dart' as benchmark;
+import 'package:benchmark/benchmarks/list/benchmark_fic_dc.dart';
+import 'package:benchmark/benchmarks/list/benchmark_normal_dc.dart';
 
 void main(List<String> arguments) {
-  final list = benchmark.setupListTester();
+  BenchmarkNormalListDeepcopy.main();
+
+  BenchmarkFicListDeepcopy.main();
 }

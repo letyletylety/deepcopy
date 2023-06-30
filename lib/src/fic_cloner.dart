@@ -6,7 +6,8 @@ import 'cloner_base.dart';
 class FICCloner implements ClonerBase {
   @override
   List deepcopyList(List list) {
-    IList iList = IList();
+    // IList iList = IList.withConfig(IList(), ConfigList());
+    ISet iList = ISet();
 
     for (final item in list) {
       if (item is Map) {
