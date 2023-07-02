@@ -1,6 +1,6 @@
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 
-List getDummyList() {
+List getDummyList(int times) {
   List originalList = [
     1,
     2,
@@ -18,7 +18,7 @@ List getDummyList() {
 
   IList list = originalList.lock;
 
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < times; i++) {
     list = list.addAll(originalList);
   }
   // print('${originalList.length}');
