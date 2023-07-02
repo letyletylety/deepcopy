@@ -1,5 +1,6 @@
 import 'cloner_base.dart';
 
+/// deepcopy with mutable list
 class NormalCloner implements ClonerBase {
   @override
   List deepcopyList(List list) {
