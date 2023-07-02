@@ -1,4 +1,3 @@
-
 import 'package:deepcopy/src/cloner.dart';
 import 'package:deepcopy/src/fic_cloner.dart';
 import 'package:deepcopy/src/json_cloner.dart';
@@ -8,7 +7,7 @@ extension ListCloner on List {
     return NormalCloner().deepcopyList(this);
   }
 
-  List fastDeepcopy() {
+  List ficDeepcopy() {
     return FICCloner().deepcopyList(this);
   }
 
@@ -22,7 +21,7 @@ extension SetCloner on Set {
     return NormalCloner().deepcopySet(this);
   }
 
-  Set fastDeepcopy() {
+  Set ficDeepcopy() {
     return FICCloner().deepcopySet(this);
   }
 
@@ -36,7 +35,7 @@ extension MapClone on Map {
     return NormalCloner().deepcopyMap(this);
   }
 
-  Map fastDeepcopy() {
+  Map ficDeepcopy() {
     return FICCloner().deepcopyMap(this);
   }
 
@@ -44,4 +43,3 @@ extension MapClone on Map {
     return JsonCloner().deepcopyMap(this);
   }
 }
-

@@ -4,6 +4,7 @@ import 'cloner_base.dart';
 
 /// fast cloner using [FIC]
 class FICCloner implements ClonerBase {
+  /// https://pub.dev/packages/fast_immutable_collections#10-flushing
   @override
   List deepcopyList(List list) {
     // IList iList = IList.withConfig(IList(), ConfigList());
@@ -11,11 +12,11 @@ class FICCloner implements ClonerBase {
 
     for (final item in list) {
       if (item is Map) {
-        iList = iList.add(deepcopyMap(item));
+        iList = iList.add(deepcopyMap(item)).flush;
       } else if (item is List) {
-        iList = iList.add(deepcopyList(item));
+        iList = iList.add(deepcopyList(item)).flush;
       } else if (item is Set) {
-        iList = iList.add(deepcopySet(item));
+        iList = iList.add(deepcopySet(item)).flush;
       } else {
         iList = iList.add(item);
       }

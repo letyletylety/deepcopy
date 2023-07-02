@@ -10,6 +10,6 @@ class BenchmarkFicListDeepcopy extends BenchmarkDeepcopyListBase {
   // The benchmark code.
   @override
   void run() {
-    List copied = list.fastDeepcopy();
+    List copied = list.ficDeepcopy();
   }
 }
