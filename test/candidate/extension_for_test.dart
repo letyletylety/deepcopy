@@ -43,3 +43,5 @@ extension MapClone on Map {
     return JsonCloner().deepcopyMap(this);
   }
 }
+
+main() {}
