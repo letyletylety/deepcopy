@@ -1,5 +1,3 @@
-import 'package:deepcopy/src/cloner_base.dart';
-
 import '../candidate/fic_cloner.dart';
 import 'package:test/test.dart';
 

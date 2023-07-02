@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:deepcopy/src/cloner_base.dart';
 import '../candidate/json_cloner.dart';
 import 'package:test/test.dart';
 
