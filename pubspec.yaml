@@ -1,6 +1,6 @@
 name: deepcopy
-description: recursive deep copy for nested collections
-version: 1.0.2
+description: simple recursive deep copy for nested collections (List, Set, Map)
+version: 1.1.0
 repository: https://github.com/letyletylety/deepcopy
 issue_tracker: https://github.com/letyletylety/deepcopy/issues
 topics:
@@ -12,12 +12,14 @@ environment:
   # flutter: '>=1.17.0'
 
 dependencies:
-  fast_immutable_collections: ^9.1.5
   # flutter:
   #   sdk: flutter
 
 dev_dependencies:
+  fast_immutable_collections: ^9.1.5
   test: ^1.24.4
+
+  benchmark_harness: ^2.2.2
 
 screenshots:
   - description: The package logo.

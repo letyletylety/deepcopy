@@ -1,5 +1,6 @@
-import 'package:benchmark/benchmarks/list/list_setup.dart';
 import 'package:benchmark_harness/benchmark_harness.dart';
+
+import 'list_setup.dart';
 
 /// benchmark base class for deep copy
 abstract class BenchmarkDeepcopyBase extends BenchmarkBase {
