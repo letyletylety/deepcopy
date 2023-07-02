@@ -1,3 +1,5 @@
-library clone;
+library deepcopy;
 
-export 'src/extension.dart';
+// TODO: TOGGLE THIS BEFORE RELEASE
+export 'src/extension_for_test.dart';
+// export 'src/extension.dart';

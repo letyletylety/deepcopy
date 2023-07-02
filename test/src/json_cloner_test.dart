@@ -1,29 +1,34 @@
+import 'dart:convert';
+
 import 'package:deepcopy/src/cloner_base.dart';
-import 'package:deepcopy/src/fic_cloner.dart';
+import 'package:deepcopy/src/json_cloner.dart';
 import 'package:test/test.dart';
 
-void main() {
-  group('fast cloner test', () {
-    ClonerBase cloner = FICCloner();
+import '../dummy_maker.dart';
 
-    const testBaseName = 'test fast cloner';
+void main() {
+  test('basic json e/decode test', () {
+    final dummyList = DummyMaker.dummyList();
+
+    final encode = jsonEncode(dummyList);
+    print(encode);
+    final decodedList = jsonDecode(encode);
+    expect(dummyList, decodedList);
+
+    decodedList[0] = 100;
+    decodedList[2][2][2][0] = 700;
+
+    print(decodedList);
+    print(dummyList);
+  });
+
+  group('test json cloner', () {
+    ClonerBase cloner = JsonCloner();
+    const testBaseName = 'test json cloner';
 
     test('$testBaseName : clonedList', () {
       // Test list cloning
-      List originalList = [
-        1,
-        2,
-        [
-          3,
-          4,
-          [
-            5,
-            6,
-            [7, 8]
-          ]
-        ],
-        {'name': 'John', 'age': 30}
-      ];
+      List originalList = DummyMaker.dummyList();
       List clonedList = cloner.deepcopyList(originalList);
 
       print(
@@ -69,17 +74,7 @@ void main() {
 
     test('$testBaseName : clonedMap', () {
       // Test map cloning
-      Map originalMap = {
-        'person': {'name': 'John', 'age': 30},
-        'numbers': [1, 2, 3],
-        'nested': {
-          'a': {
-            'b': {
-              'c': {'d': 'deep'}
-            }
-          }
-        }
-      };
+      final originalMap = DummyMaker.dummyMap();
       Map clonedMap = cloner.deepcopyMap(originalMap);
 
       print(
@@ -121,25 +116,7 @@ void main() {
 
     test('$testBaseName : clonedSet', () {
       // Test set cloning
-      Set originalSet = {
-        'apple',
-        'banana',
-        {'carrot'},
-        [
-          'durian',
-          [
-            'elderberry',
-            {
-              'fig',
-              [
-                'grapefruit',
-                {'honeydew'}
-              ]
-            }
-          ]
-        ],
-        {'mango': 'sweet', 'orange': 'juicy'}
-      };
+      final originalSet = DummyMaker.dummySet();
       Set clonedSet = cloner.deepcopySet(originalSet);
 
       print(

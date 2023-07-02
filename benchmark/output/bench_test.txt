@@ -1,0 +1,12 @@
+normal list deepcopy(RunTime): 68.1506267552572 us.
+fic list deepcopy(RunTime): 553.09975 us.
+json list deepcopy(RunTime): 373.63229992790195 us.
+testtime: 2023-07-02 15:50:53.242572
+normal list deepcopy(RunTime): 651.34475 us.
+fic list deepcopy(RunTime): 11002.785340314136 us.
+json list deepcopy(RunTime): 3073.10875 us.
+testtime: 2023-07-02 15:51:01.313872
+normal list deepcopy(RunTime): 6421.116883116883 us.
+fic list deepcopy(RunTime): 992440.0 us.
+json list deepcopy(RunTime): 31163.18181818182 us.
+testtime: 2023-07-02 15:51:08.013811

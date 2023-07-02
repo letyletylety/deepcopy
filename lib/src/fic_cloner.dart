@@ -7,7 +7,7 @@ class FICCloner implements ClonerBase {
   @override
   List deepcopyList(List list) {
     // IList iList = IList.withConfig(IList(), ConfigList());
-    ISet iList = ISet();
+    IList iList = IList();
 
     for (final item in list) {
       if (item is Map) {
