@@ -48,7 +48,7 @@ If you're interested in learning more, check out the
 The internal implementation is simple. I used the intuitive method of adding items one by one to a new `MutableList`.
 
 You can check it out here :
-[implementation](lib\src\cloner.dart)
+[implementation](lib/src/cloner.dart)
 
 - ### vs Json Decode/Encode ?
 
@@ -60,7 +60,7 @@ You can check it out here :
     But unlike `IList<int>`, the benchmarks for `IList<dynamic>` were actually even worse.
 
 You can check the benchmark result out here :
-[benchmark](test\benchmark\output\bench_test.txt)
+[benchmark](test/benchmark/output/bench_test.txt)
 
 You can also run your own benchmark code if you want.
 
