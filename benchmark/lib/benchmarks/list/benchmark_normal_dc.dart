@@ -3,7 +3,7 @@ import 'package:deepcopy/deepcopy.dart';
 
 import 'list_setup.dart';
 
-class BenchmarkNormalListDeepcopy extends BenchmarkDeepcopyListBase {
+final class BenchmarkNormalListDeepcopy extends BenchmarkDeepcopyListBase {
   BenchmarkNormalListDeepcopy(int times) : super('normal list deepcopy', times);
 
   static void main(int times) {

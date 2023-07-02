@@ -15,7 +15,7 @@ abstract class BenchmarkDeepcopyBase extends BenchmarkBase {
 }
 
 /// benchmark base class for deep copy
-abstract class BenchmarkDeepcopyListBase extends BenchmarkBase {
+abstract base class BenchmarkDeepcopyListBase extends BenchmarkBase {
   BenchmarkDeepcopyListBase(
     super.name,
     this.times, [

@@ -1,6 +1,7 @@
 import 'package:benchmark/benchmarks/list/benchmark_fic_dc.dart';
 import 'package:benchmark/benchmarks/list/benchmark_json_dc.dart';
 import 'package:benchmark/benchmarks/list/benchmark_normal_dc.dart';
+import 'package:benchmark/benchmarks/list/list_setup.dart';
 
 void main(List<String> arguments) {
   // final file = File('output/bench_test.txt');
@@ -16,10 +17,11 @@ void main(List<String> arguments) {
 }
 
 void listBenchmark(int times) {
+  final list = getDummyList(1);
+  print('list length : ${list.length * times}');
   BenchmarkNormalListDeepcopy.main(times);
   BenchmarkFicListDeepcopy.main(times);
   BenchmarkJsonListDeepcopy.main(times);
-  print('testtime: ${DateTime.now()}');
 }
 
 /// normal list deepcopy(RunTime): 731.51575 us.
