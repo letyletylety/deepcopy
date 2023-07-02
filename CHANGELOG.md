@@ -1,3 +1,7 @@
+# 1.1.1
+
+- Fix link errors in your README
+
 # 1.1.0 
 
 - add benchmark code to compare with JSON and FIC implementations
