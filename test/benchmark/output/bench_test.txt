@@ -1,12 +1,15 @@
-list length : 80
-normal list deepcopy(RunTime): 72.59361757978026 us.
-fic list deepcopy(RunTime): 621.0629764666887 us.
-json list deepcopy(RunTime): 356.8603257816888 us.
-list length : 800
-normal list deepcopy(RunTime): 682.434 us.
-fic list deepcopy(RunTime): 22785.691489361703 us.
-json list deepcopy(RunTime): 3245.710644677661 us.
-list length : 8000
-normal list deepcopy(RunTime): 6649.715568862275 us.
-fic list deepcopy(RunTime): 1888508.0 us.
-json list deepcopy(RunTime): 30618.524590163935 us.
+================================
+list length : 40
+normal list deepcopy(RunTime): 69.92623549164172 us.
+fic list deepcopy(RunTime): 591.26125 us.
+json list deepcopy(RunTime): 360.84069063723746 us.
+================================
+list length : 400
+normal list deepcopy(RunTime): 670.3355 us.
+fic list deepcopy(RunTime): 25010.119047619046 us.
+json list deepcopy(RunTime): 3228.592203898051 us.
+================================
+list length : 4000
+normal list deepcopy(RunTime): 6688.715568862275 us.
+fic list deepcopy(RunTime): 1945626.5 us.
+json list deepcopy(RunTime): 30444.144927536232 us.

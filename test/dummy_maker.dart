@@ -2,7 +2,7 @@
 
 /// make dummymaker
 abstract class DummyMaker {
-  static dummyList() {
+  static List dummyList(int times) {
     List originalList = [
       1,
       2,
@@ -17,7 +17,14 @@ abstract class DummyMaker {
       ],
       {'name': 'John', 'age': 30}
     ];
-    return originalList;
+
+    List list = [];
+
+    for (var i = 0; i < times; i++) {
+      list.addAll(originalList);
+    }
+    // print('${originalList.length}');
+    return list;
   }
 
   static Set dummySet() {
@@ -58,3 +65,22 @@ abstract class DummyMaker {
     return originalMap;
   }
 }
+
+
+  // static List dummyList(int time) {
+  //   List originalList = [
+  //     1,
+  //     2,
+  //     [
+  //       3,
+  //       4,
+  //       [
+  //         5,
+  //         6,
+  //         [7, 8]
+  //       ]
+  //     ],
+  //     {'name': 'John', 'age': 30}
+  //   ];
+  //   return originalList;
+  // }

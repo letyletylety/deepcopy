@@ -1,7 +1,7 @@
 # deepcopy
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/letyletylety/deepcopy/main/logos/deepcopy_logo%404x.png" height="256" alt="deepcopy" 
+<img src="https://raw.githubusercontent.com/letyletylety/deepcopy/main/logos/deepcopy_logo%404x.png" height="256" alt="deepcopy"
 background-color='transparent'/>
 </p>
 
@@ -59,15 +59,14 @@ You can check it out here :
     When I first thought about creating this plugin, the first thing I thought of was FIC.
     But unlike `IList<int>`, the benchmarks for `IList<dynamic>` were actually even worse.
 
-you can check the benchmark result out here :
-[benchmark](benchmark\output\bench_test.txt)
+You can check the benchmark result out here :
+[benchmark](test\benchmark\output\bench_test.txt)
 
 You can also run your own benchmark code if you want.
 
 ```bash
-/// In this repo
-cd benchmark
-dart .\bin\benchmark.dart
+cd test/benchmark
+dart benchmark.dart
 ```
 
 ## Todos
@@ -80,7 +79,7 @@ dart .\bin\benchmark.dart
 
 At first I thought of names like "deepcopy" or "clone". I chose the shorter of the two, "clone". It didn't show up when I searched it in pub.dev. After implementing all the code, creating a logo, and writing the README,
 I got an unauthorized error trying to deploy version 1.0.
-It wasn't until I typed "https://pub.dev/packages/clone" into the address bar that I realized that the name had been taken six years earlier. I didn't realize that I might not be able to find the plugin on pub. I thought of "deepcopy" as the next best thing.
+It wasn't until I typed "<https://pub.dev/packages/clone>" into the address bar that I realized that the name had been taken six years earlier. I didn't realize that I might not be able to find the plugin on pub. I thought of "deepcopy" as the next best thing.
 
 ## Contribute
 

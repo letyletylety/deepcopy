@@ -8,7 +8,7 @@ import '../dummy_maker.dart';
 
 void main() {
   test('basic json e/decode test', () {
-    final dummyList = DummyMaker.dummyList();
+    final dummyList = DummyMaker.dummyList(1);
 
     final encode = jsonEncode(dummyList);
     print(encode);
@@ -28,7 +28,7 @@ void main() {
 
     test('$testBaseName : clonedList', () {
       // Test list cloning
-      List originalList = DummyMaker.dummyList();
+      List originalList = DummyMaker.dummyList(1);
       List clonedList = cloner.deepcopyList(originalList);
 
       print(

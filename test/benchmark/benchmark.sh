@@ -1,1 +1,1 @@
-dart run bin/benchmark.dart > output/bench_test.txt
+dart run benchmark.dart > output/bench_test.txt
