@@ -12,6 +12,7 @@ final class BenchmarkNormalListDeepcopy extends BenchmarkDeepcopyListBase {
   // The benchmark code.
   @override
   void run() {
+    // ignore: unused_local_variable
     List copied = list.deepcopy();
     // copied.length;
     // print(copied);

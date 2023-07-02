@@ -11,6 +11,7 @@ final class BenchmarkFicListDeepcopy extends BenchmarkDeepcopyListBase {
   // The benchmark code.
   @override
   void run() {
+    // ignore: unused_local_variable
     List copied = list.ficDeepcopy();
   }
 }
