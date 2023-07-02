@@ -1,3 +1,7 @@
+# 1.1.0 
+
+- add benchmark code to compare with JSON and FIC implementations
+
 # 1.0.2
 
 fix https://pub.dev/packages/deepcopy/example correctly
