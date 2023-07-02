@@ -19,8 +19,15 @@ class JsonCloner extends ClonerBase {
 
   @override
   Set deepcopySet(Set set) {
-    final encodedMap = jsonEncode(set);
+    /// how to set encode?
+    final l = set
+        .map(
+          (e) => e,
+        )
+        .toList(growable: false);
+    return Set.of(l);
+    // final encodedMap = jsonEncode(set);
 
-    return Set.from(jsonDecode(encodedMap));
+    // return Set.from(jsonDecode(encodedMap));
   }
 }

@@ -1,10 +1,11 @@
 import 'package:deepcopy/src/cloner_base.dart';
-import 'package:deepcopy/src/fic_cloner.dart';
+
+import '../candidate/fic_cloner.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('fast cloner test', () {
-    ClonerBase cloner = FICCloner();
+    FICCloner cloner = FICCloner();
 
     const testBaseName = 'test fast cloner';
 

@@ -1,11 +1,12 @@
 // ignore_for_file: avoid_print
 
 import 'package:deepcopy/src/cloner.dart';
+import 'package:deepcopy/src/cloner_base.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('test normal cloner', () {
-    NormalCloner cloner = NormalCloner();
+    ClonerBase cloner = NormalCloner();
 
     const testBaseName = 'test normal cloner';
 

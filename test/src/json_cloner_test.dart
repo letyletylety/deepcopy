@@ -1,29 +1,42 @@
 import 'dart:convert';
 
 import 'package:deepcopy/src/cloner_base.dart';
-import 'package:deepcopy/src/json_cloner.dart';
+import '../candidate/json_cloner.dart';
 import 'package:test/test.dart';
 
 import '../dummy_maker.dart';
 
 void main() {
-  test('basic json e/decode test', () {
-    final dummyList = DummyMaker.dummyList(1);
+  group('json basic test', () {
+    test('basic json e/decode test', () {
+      final dummyList = DummyMaker.dummyList(1);
 
-    final encode = jsonEncode(dummyList);
-    print(encode);
-    final decodedList = jsonDecode(encode);
-    expect(dummyList, decodedList);
+      final encode = jsonEncode(dummyList);
+      print(encode);
+      final decodedList = jsonDecode(encode);
+      expect(dummyList, decodedList);
 
-    decodedList[0] = 100;
-    decodedList[2][2][2][0] = 700;
+      decodedList[0] = 100;
+      decodedList[2][2][2][0] = 700;
 
-    print(decodedList);
-    print(dummyList);
+      print(decodedList);
+      print(dummyList);
+    });
+
+    // test('set json e/decode test', () {
+    //   final dummySet = DummyMaker.dummySet(1);
+
+    //   print(dummySet);
+
+    //   final encode = jsonEncode(dummySet);
+    //   print(encode);
+    //   final decodedSet = jsonDecode(encode);
+    //   expect(dummySet, decodedSet);
+    // });
   });
 
   group('test json cloner', () {
-    ClonerBase cloner = JsonCloner();
+    JsonCloner cloner = JsonCloner();
     const testBaseName = 'test json cloner';
 
     test('$testBaseName : clonedList', () {
@@ -116,11 +129,11 @@ void main() {
 
     test('$testBaseName : clonedSet', () {
       // Test set cloning
-      final originalSet = DummyMaker.dummySet();
-      Set clonedSet = cloner.deepcopySet(originalSet);
-
+      final originalSet = DummyMaker.dummySet(1);
       print(
           originalSet); // Output: {apple, banana, {carrot}, [durian, [elderberry, {fig, [grapefruit, {honeydew}]}]], {mango: sweet, orange: juicy}}
+      Set clonedSet = cloner.deepcopySet(originalSet);
+
       print(
           clonedSet); // Output: {apple, banana, {carrot}, [durian, [elderberry, {fig, [grapefruit, {honeydew}]}]], {mango: sweet, orange: juicy}}
       clonedSet.add('papaya');

@@ -1,4 +1,4 @@
-import 'package:deepcopy/src/extension_for_test.dart';
+import '../../../candidate/extension_for_test.dart';
 
 import 'benchmark_base.dart';
 

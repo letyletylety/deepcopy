@@ -27,7 +27,7 @@ abstract class DummyMaker {
     return list;
   }
 
-  static Set dummySet() {
+  static Set dummySet(int times) {
     Set originalSet = {
       'apple',
       'banana',
@@ -47,7 +47,14 @@ abstract class DummyMaker {
       ],
       {'mango': 'sweet', 'orange': 'juicy'}
     };
-    return originalSet;
+
+    Set set = Set();
+
+    for (var i = 0; i < times; i++) {
+      set.addAll(originalSet);
+    }
+    // print('${originalList.length}');
+    return set;
   }
 
   static Map dummyMap() {

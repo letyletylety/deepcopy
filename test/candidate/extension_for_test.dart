@@ -1,6 +1,6 @@
 import 'package:deepcopy/src/cloner.dart';
-import 'package:deepcopy/src/fic_cloner.dart';
-import 'package:deepcopy/src/json_cloner.dart';
+import 'fic_cloner.dart';
+import 'json_cloner.dart';
 
 extension ListCloner on List {
   List deepcopy() {

@@ -1,6 +1,6 @@
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 
-import 'cloner_base.dart';
+import '../../lib/src/cloner_base.dart';
 
 /// fast cloner using [FIC]
 class FICCloner implements ClonerBase {
