@@ -18,13 +18,14 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-    deepcopy: ^1.1.1
+    deepcopy: ^1.1.2
 ```
 
 ## Features
 
 - Deep copying of lists, maps, and sets with nested structures.
 - Easy to use by using extensions.
+- Measuring the benchmarks (vs. JSON, vs. FIC)
 
 ## Usage
 

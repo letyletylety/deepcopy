@@ -1,3 +1,7 @@
+# 1.1.2
+
+- add documentation comments.
+
 # 1.1.1
 
 - Fix link errors in your README

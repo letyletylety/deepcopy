@@ -1,6 +1,6 @@
 name: deepcopy
 description: simple recursive deep copy for nested collections (List, Set, Map)
-version: 1.1.1
+version: 1.1.2
 repository: https://github.com/letyletylety/deepcopy
 issue_tracker: https://github.com/letyletylety/deepcopy/issues
 topics:

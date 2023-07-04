@@ -2,6 +2,7 @@ import 'cloner_base.dart';
 
 /// deepcopy with mutable list
 class NormalCloner implements ClonerBase {
+  /// mutable list deepcopy
   @override
   List deepcopyList(List list) {
     List copy = [];
@@ -20,6 +21,7 @@ class NormalCloner implements ClonerBase {
     return copy;
   }
 
+  /// mutable map deepcopy
   @override
   Map deepcopyMap(Map map) {
     Map copy = {};
@@ -41,6 +43,7 @@ class NormalCloner implements ClonerBase {
     return copy;
   }
 
+  /// mutable map deepcopy
   @override
   Set deepcopySet(Set set) {
     Set copy = {};
