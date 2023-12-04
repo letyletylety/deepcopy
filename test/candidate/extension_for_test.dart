@@ -2,44 +2,44 @@ import 'package:deepcopy/src/cloner.dart';
 import 'fic_cloner.dart';
 import 'json_cloner.dart';
 
-extension ListCloner on List {
-  List deepcopy() {
+extension ListCloner<T> on List<T> {
+  List<T> deepcopy() {
     return NormalCloner().deepcopyList(this);
   }
 
-  List ficDeepcopy() {
+  List<T> ficDeepcopy() {
     return FICCloner().deepcopyList(this);
   }
 
-  List jsonDeepcopy() {
+  List<T> jsonDeepcopy() {
     return JsonCloner().deepcopyList(this);
   }
 }
 
-extension SetCloner on Set {
-  Set deepcopy() {
+extension SetCloner<T> on Set<T> {
+  Set<T> deepcopy() {
     return NormalCloner().deepcopySet(this);
   }
 
-  Set ficDeepcopy() {
+  Set<T> ficDeepcopy() {
     return FICCloner().deepcopySet(this);
   }
 
-  Set jsonDeepcopy() {
+  Set<T> jsonDeepcopy() {
     return JsonCloner().deepcopySet(this);
   }
 }
 
-extension MapClone on Map {
-  Map deepcopy() {
+extension MapClone<K, V> on Map<K, V> {
+  Map<K, V> deepcopy() {
     return NormalCloner().deepcopyMap(this);
   }
 
-  Map ficDeepcopy() {
+  Map<K, V> ficDeepcopy() {
     return FICCloner().deepcopyMap(this);
   }
 
-  Map jsonDeepcopy() {
+  Map<K, V> jsonDeepcopy() {
     return JsonCloner().deepcopyMap(this);
   }
 }

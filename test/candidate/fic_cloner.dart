@@ -1,3 +1,4 @@
+import 'package:deepcopy/src/subtype.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 
 import '../../lib/src/cloner_base.dart';
@@ -6,9 +7,9 @@ import '../../lib/src/cloner_base.dart';
 class FICCloner implements ClonerBase {
   /// https://pub.dev/packages/fast_immutable_collections#10-flushing
   @override
-  List deepcopyList(List list) {
+  List<T> deepcopyList<T>(List<T> list) {
     // IList iList = IList.withConfig(IList(), ConfigList());
-    IList iList = IList();
+    IList iList = IList<T>();
 
     for (final item in list) {
       if (item is Map) {
@@ -21,12 +22,12 @@ class FICCloner implements ClonerBase {
         iList = iList.add(item);
       }
     }
-    return iList.toList();
+    return iList.toList() as List<T>;
   }
 
   @override
-  Set deepcopySet(Set set) {
-    IList iList = IList();
+  Set<T> deepcopySet<T>(Set<T> set) {
+    IList iList = IList<T>();
 
     for (final item in set) {
       if (item is Map) {
@@ -39,23 +40,23 @@ class FICCloner implements ClonerBase {
         iList = iList.add(item);
       }
     }
-    return iList.toSet();
+    return iList.toSet() as Set<T>;
   }
 
   @override
-  Map deepcopyMap(Map map) {
-    IList<MapEntry> iMapList = IList<MapEntry>();
+  Map<K, V> deepcopyMap<K, V>(Map<K, V> map) {
+    IList<MapEntry<K, V>> iMapList = IList<MapEntry<K, V>>();
 
     for (final entry in map.entries) {
       final key = entry.key;
       final value = entry.value;
 
-      if (value is Map) {
-        iMapList = iMapList.add(MapEntry(key, deepcopyMap(value)));
-      } else if (value is List) {
-        iMapList = iMapList.add(MapEntry(key, deepcopyList(value)));
-      } else if (value is Set) {
-        iMapList = iMapList.add(MapEntry(key, deepcopySet(value)));
+      if (value is Map && isSubtype<Map, V>()) {
+        iMapList = iMapList.add(MapEntry(key, deepcopyMap(value) as V));
+      } else if (value is List && isSubtype<List, V>()) {
+        iMapList = iMapList.add(MapEntry(key, deepcopyList(value) as V));
+      } else if (value is Set && isSubtype<Set, V>()) {
+        iMapList = iMapList.add(MapEntry(key, deepcopySet(value) as V));
       } else {
         iMapList = iMapList.add(MapEntry(key, value));
       }

@@ -1,11 +1,11 @@
 /// cloner interface
 abstract class ClonerBase {
   /// mutable list deepcopy
-  List deepcopyList(List list);
+  List<T> deepcopyList<T>(List<T> list);
 
   /// mutable set deepcopy
-  Set deepcopySet(Set set);
+  Set<T> deepcopySet<T>(Set<T> set);
 
   /// mutable map deepcopy
-  Map deepcopyMap(Map map);
+  Map<K, V> deepcopyMap<K, V>(Map<K, V> map);
 }
