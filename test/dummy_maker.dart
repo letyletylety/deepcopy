@@ -1,5 +1,7 @@
 // THIS IS NOT A TEST FILE
 
+import 'dart:math';
+
 /// make dummymaker
 abstract class DummyMaker {
   static List dummyList(int times) {
@@ -70,6 +72,14 @@ abstract class DummyMaker {
       }
     };
     return originalMap;
+  }
+
+  /// generate random list<int> data
+  ///
+  static List<int> getDummyIntList(int length) {
+    final rand = Random(DateTime.now().microsecond);
+
+    return List.generate(length, (index) => rand.nextInt(10000));
   }
 }
 
