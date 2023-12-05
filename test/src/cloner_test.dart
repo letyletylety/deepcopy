@@ -80,22 +80,27 @@ void main() {
               'c': {'d': 'deep'}
             }
           }
-        }
+        },
+        'set': Set.of({1, 'Hi', 3}),
       };
       Map clonedMap = cloner.deepcopyMap(originalMap);
 
       print(
-          originalMap); // Output: {person: {name: John, age: 30}, numbers: [1, 2, 3], nested: {a: {b: {c: {d: deep}}}}}
-      print(
-          clonedMap); // Output: {person: {name: John, age: 30}, numbers: [1, 2, 3], nested: {a: {b: {c: {d: deep}}}}}
+          originalMap); // Output: {'person': {'name': 'John', 'age': 30},'numbers': [1, 2, 3], 'nested': {'a': {'b': {'c': {'d': 'deep'}}}},'set': Set:[1, 'Hi', 3]}
+      print(clonedMap); // <Same Output>
 
+      /// changes in the original Map
       clonedMap['person']['name'] = 'Jane';
       clonedMap['nested']['a']['b']['c']['d'] = 'modified';
+      clonedMap['set'].add('new element');
+      clonedMap['set'].remove(clonedMap['set'].elementAt(2));
+
       print(
           originalMap); // Output: {person: {name: Jane, age: 30}, numbers: [1, 2, 3], nested: {a: {b: {c: {d: modified}}}}}
 
       print(
           clonedMap); // Output: {person: {name: John, age: 30}, numbers: [1, 2, 3], nested: {a: {b: {c: {d: deep}}}}}
+
       expect({
         'person': {'name': 'John', 'age': 30},
         'numbers': [1, 2, 3],
@@ -105,7 +110,8 @@ void main() {
               'c': {'d': 'deep'}
             }
           }
-        }
+        },
+        'set': {1, 'Hi', 3},
       }, originalMap); // Output:
 
       expect({
@@ -117,7 +123,8 @@ void main() {
               'c': {'d': 'modified'}
             }
           }
-        }
+        },
+        'set': {1, 'Hi', 'new element'},
       }, clonedMap); // Output:
     });
 
