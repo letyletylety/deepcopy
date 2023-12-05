@@ -1,6 +1,6 @@
 import '../../../candidate/extension_for_test.dart';
 
-import 'benchmark_base.dart';
+import '../benchmark_base.dart';
 
 final class BenchmarkJsonListDeepcopy extends BenchmarkDeepcopyListBase {
   BenchmarkJsonListDeepcopy(int times) : super('json list deepcopy', times);

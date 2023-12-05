@@ -1,6 +1,6 @@
 import 'package:benchmark_harness/benchmark_harness.dart';
 
-import 'list_setup.dart';
+import '../benchmark_lib.dart';
 
 /// benchmark base class for deep copy
 abstract class BenchmarkDeepcopyBase extends BenchmarkBase {
@@ -34,6 +34,6 @@ abstract base class BenchmarkDeepcopyListBase extends BenchmarkBase {
 
   @override
   void setup() {
-    list = getDummyList(times);
+    list = DummyMaker.dummyList(times);
   }
 }

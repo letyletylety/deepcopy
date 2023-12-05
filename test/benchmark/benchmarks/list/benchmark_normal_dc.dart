@@ -1,6 +1,6 @@
 import 'package:deepcopy/deepcopy.dart';
 
-import 'benchmark_base.dart';
+import '../benchmark_base.dart';
 
 final class BenchmarkNormalListDeepcopy extends BenchmarkDeepcopyListBase {
   BenchmarkNormalListDeepcopy(int times) : super('normal list deepcopy', times);

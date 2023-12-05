@@ -1,5 +1,5 @@
 import '../../../candidate/extension_for_test.dart';
-import 'benchmark_base.dart';
+import '../benchmark_base.dart';
 
 final class BenchmarkFicListDeepcopy extends BenchmarkDeepcopyListBase {
   BenchmarkFicListDeepcopy(int times) : super('fic list deepcopy', times);

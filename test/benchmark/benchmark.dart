@@ -1,4 +1,3 @@
-import '../dummy_maker.dart';
 import 'benchmark_lib.dart';
 
 void main(List<String> arguments) {
