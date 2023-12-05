@@ -1,5 +1,3 @@
-import 'package:deepcopy/src/cloner_base.dart';
-
 /// cloner interface
 abstract class OldClonerBase {
   /// mutable list deepcopy
