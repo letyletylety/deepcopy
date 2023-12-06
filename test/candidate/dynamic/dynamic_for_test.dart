@@ -11,7 +11,7 @@ abstract class OldClonerBase {
 }
 
 /// deepcopy with mutable list
-class NormalCloner implements OldClonerBase {
+class OldNormalCloner implements OldClonerBase {
   /// mutable list deepcopy
   @override
   List deepcopyList(List list) {

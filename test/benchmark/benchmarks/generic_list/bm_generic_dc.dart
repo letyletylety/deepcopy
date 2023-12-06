@@ -1,6 +1,8 @@
 import 'package:benchmark_harness/benchmark_harness.dart';
 import 'package:deepcopy/deepcopy.dart';
+import 'package:deepcopy/src/cloner.dart';
 
+import '../../../candidate/dynamic/dynamic_for_test.dart';
 import '../../benchmark_lib.dart';
 
 /// benchmark base class for deep copy in generic list
@@ -36,7 +38,7 @@ final class BenchmarkNormalGenericListDeepcopy<T>
   @override
   void run() {
     // ignore: unused_local_variable
-    List<T> copied = list.deepcopy();
+    List<T> copied = NormalCloner().deepcopyList<T>(list);
     // copied.length;
     // print(copied);
     // print('list length : ${copied.length}');
@@ -52,7 +54,7 @@ final class BenchmarkGenericListDeepcopyOld<T>
   @override
   void run() {
     // ignore: unused_local_variable
-    List<T> copied = list.deepcopy();
+    List copied = OldNormalCloner().deepcopyList(list);
     // copied.length;
     // print(copied);
     // print('list length : ${copied.length}');
